@@ -74,5 +74,9 @@
         "command": "workbench.action.files.openFile",
         "when": "true"
     },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.kill"
+    },
     
 ]
