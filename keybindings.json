@@ -32,13 +32,9 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+k",
+        "key": "ctrl+;",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
-    }, 
-    {
-        "key": "ctrl+n",
-        "command": "extension.advancedNewFile"
     },
     {
         "key": "ctrl+1",
@@ -50,21 +46,20 @@
         "when": "terminal.active"
     },
     {
-         "key": "ctrl+y",
-         "command": "workbench.action.terminal.toggleTerminal",
-         "when": "terminal.active"   
+        "key": "ctrl+y",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     },
     {
         "key": "ctrl+u",
         "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus" 
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+i",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
-    
     {
         "key": "ctrl+f4",
         "command": "workbench.action.closeActiveEditor"
@@ -76,7 +71,15 @@
     },
     {
         "key": "ctrl+k",
-        "command": "workbench.action.terminal.kill"
+        "command": "workbench.action.terminal.kill",
+        "when": "terminal.active"
     },
-    
+    {
+        "key": "ctrl+oem_2",
+        "command": "editor.action.commentLine"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "newFile.createNewFile"
+    },
 ]
