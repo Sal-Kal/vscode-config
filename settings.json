@@ -1,4 +1,10 @@
 {
+    "newFile.defaultBaseFileName": "newFile",
+    "newFile.relativeTo": "file", // "root" or "project"
+    "newFile.defaultFileExtension": "",
+    "newFile.rootDirectory": "~",
+    "newFile.showPathRelativeTo": "root", // "project" or "none"
+    "newFile.expandBraces": true, // setting to true will allow for creating multiple files such as `new-folder/{file1,file2}.js`
     "workbench.editor.untitled.hint": "hidden",
     "code-runner.runInTerminal": true,
     "editor.suggestSelection": "first",
@@ -13,23 +19,29 @@
     "vim.easymotionMarkerooundColor": "#020202",
     "vim.normalModeKeyBindings": [
         {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-        },
-        {
-        "before": ["<tab>"],
-        "commands": ["workbench.action.nextEditor"]
-        },
-        {
-        "before": ["<S-tab>"],
-        "commands": ["workbench.action.previousEditor"]
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
         },
         {
             "before": [
-                ":"
+                "<tab>"
             ],
             "commands": [
-                "workbench.action.showCommands"
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "<S-tab>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
             ]
         },
         {
@@ -40,102 +52,172 @@
             "commands": [
                 "workbench.action.terminal.toggleTerminal"
             ]
-        }, 
-        {
-            "before": [
-                "<leader>","r"
-            ],
-            "commands": ["openInTerminal"] 
         },
         {
             "before": [
-                "<leader>","x"
+                "<leader>",
+                "r"
             ],
-            "commands": ["workbench.action.closeActiveEditor"]
-        }, 
+            "commands": [
+                "openInTerminal"
+            ]
+        },
         {
             "before": [
-                "<leader>","o"
+                "<leader>",
+                "x"
             ],
-            "commands": ["workbench.action.files.openFile"]
-        }
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.files.openFile"
+            ]
+        },
     ],
     "vim.insertModeKeyBindings": [
         {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-        "before": ["<C-j>"],
-        "after": ["<Esc>"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-        "before": ["<C-k>"],
-        "after": ["<Esc>"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.visualModeKeyBindings": [
         {
-        "before": [">"],
-        "after": [">", "g", "v"]
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">",
+                "g",
+                "v"
+            ]
         },
         {
-        "before": ["<"],
-        "after": ["<", "g", "v"]
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<",
+                "g",
+                "v"
+            ]
         },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [
+                "_"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
         },
         {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
         },
         {
-        "before": ["<leader>", "w"],
-        "commands": ["workbench.action.splitEditor"]
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
         },
         {
-        "before": ["<leader>", "e"],
-        "commands": ["workbench.action.toggleSidebarVisibility"]
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
         },
         {
-        "before": ["<leader>", "f"],
-        "commands": ["revealInExplorer"]
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "revealInExplorer"
+            ]
         },
         {
-        "before": ["<leader>", "h"],
-        "after": ["_"]
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [
+                "_"
+            ]
         },
         {
-        "before": ["<leader>", "l"],
-        "after": ["$"]
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
         },
-        
     ],
     "vim.leader": "<space>",
-
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false,
-        // VS Code new marker @ next occurence
-        "<C-d>": false,
-        // Copy
-        "<C-c>": false,
-        // Cut
-        "<C-x>": false,
-        // Paste
-        "<C-v>": false,
-        "<C-z>": false,
-        "<C-y>": false
-
-    },
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
-        "**/.settings": true,                               
+        "**/.settings": true,
         "**/.factorypath": true
     },
     "workbench.editorAssociations": {
@@ -146,7 +228,6 @@
         "jupyter-notebook": "left"
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Visual Studio Dark",
     "editor.formatOnSave": true,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -154,5 +235,13 @@
     "editor.formatOnPaste": true,
     "diffEditor.wordWrap": "on",
     "editor.wordWrap": "on",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Ayu Dark Bordered",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "Jetbrains Mono",
+    "workbench.iconTheme": "ayu",
+    "editor.fontLigatures": true,
+    "editor.minimap.scale": 2,
+    "editor.lineNumbers": "relative"
 }
